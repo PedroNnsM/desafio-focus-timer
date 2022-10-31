@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+:root{
+    --bg-primary: #ffffff ;
+    --bg-button: #E1E1E6 ;
+    --bg-button-focus: #02799D ;
+    --primary-icon-color:#323238;
+    --secondary-icon-color:#fff;
+
+    --ff: 'Roboto', sans-serif; ;
+    --color-primary: #323238;
+
+    font-size: 62.5%;
+    
+}
+
+body{
+    height: 100vh ; 
+    width: 100vw;
+    font-size: 1.6rem;
+    font-family: var(--ff);
+    background-color: var(--bg-primary);
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.page{
+    height: 33.6rem;
+    width: 81rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer{
+    font-size: 10.5rem;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+}
+
+.themes {
+    display: grid;
+    grid-template-areas:         
+        "A C "
+        "B D ";
+    grid-gap: 3.2rem;
+    
+}
+
+.themes button {
+    width: 13.8rem;
+    height: 15.8rem;
+
+    background-color: var(--bg-button);
+    border-radius: 2.4rem;
+}
+
+.themes button:focus{
+    background-color: var(--bg-button-focus);
+}
+.themes button:focus svg path{
+    fill: var(--secondary-icon-color);
+}
+
+.jungle svg path,
+.rain svg path,
+.coffee-shop svg path,
+.fireplace svg path
+{
+  fill: var(--primary-icon-color);
+}
